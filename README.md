@@ -8,12 +8,12 @@ Author: Mahdi Aouchiche (<https://github.com/mahdi-aouchiche/ADT_09_sorting_algo
 
 ## Sort Algorithms time complexity
 
-Algorithm           |   Best Case   |   Average Case    |   Worst Case  |
-    ---             |       ---     |       ---         |       ---     |
-`Quick-Sort`        |   n log n     |   n log n         |   n^2         |
-`Insertion-Sort`    |   n           |   n^2             |   n^2         |
-`Bubble-Sort`       |   n           |   n^2             |   n^2         |
-`Selection-sort`    |   n^2         |   n^2             |   n^2         |
+|   Algorithm           |   Best Case   |   Average Case    |   Worst Case  |
+|:----------------------|:-------------:|:-----------------:|--------------:|
+|   `Quick-Sort`        |   n log n     |   n log n         |   n^2         |
+|   `Insertion-Sort`    |   n           |   n^2             |   n^2         |
+|   `Bubble-Sort`       |   n           |   n^2             |   n^2         |
+|   `Selection-sort`    |   n^2         |   n^2             |   n^2         |
 
 ### To run the project nicely run the following commands
 
