@@ -1,11 +1,10 @@
 #ifndef __SORTING_ALGORITHMS_HPP__
 #define __SORTING_ALGORITHMS_HPP__
-
-#include <ctime>
 #include <algorithm>
-#include <chrono>
+#include <cmath>
 using namespace std;
 
+// QUICK-SORT ALGORITHM
 /* 
   Partitions the given array to low 
   and high partitions from the pivot. 
@@ -120,7 +119,7 @@ int medianOfThreePartition(int numbers[], int i, int k) {
 } 
 
 /* 
-  This function utilizes different pivot selection
+  Function utilizes different pivot selection
   technique in quicksort algorithm.
   The pivot is the median of the following three values:
     - leftmost (numbers[i])
@@ -140,8 +139,9 @@ void Quicksort_medianOfThree(int numbers[], int i, int k) {
   Quicksort_midpoint(numbers, j + 1, k); // sort high partition
 }
 
+// INSERTION-SORT ALGORITHM
 /* 
-  This function sorts the given array using InsertionSort method.
+  Sorts the given array using InsertionSort method.
 */ 
 void InsertionSort(int numbers[], int numbersSize) {
   int i = 0;
@@ -158,6 +158,44 @@ void InsertionSort(int numbers[], int numbersSize) {
       numbers[j] = numbers[j-1];
       numbers[j-1] = temp;
       --j; 
+    }
+  } 
+}
+
+// BUBBLE-SORT ALGORITHM
+/*
+  Bubblesort, sorts inplace
+*/
+void BubbleSort(int numbers[], int numbersSize) {  
+    int i, j;  
+    for (i = 0; i < numbersSize; i++) {     
+      for (j = 0; j < numbersSize-i; j++) {
+        if (numbers[j] > numbers[j+1]) { 
+            swap(numbers[j], numbers[j+1]);  
+        }
+      }
+    }
+}
+
+// SELECTION-SORT ALGORITHM
+void SelectionSort(int numbers[], int numbersSize) {
+  if(numbersSize < 1) {
+    return;
+  }
+
+  int i;
+  int j;
+  int min;
+
+  for(i = 0; i < numbersSize - 2; i++ ) {
+    min = i;
+    for(j = i + 1; j < numbersSize; j++) {
+      if(numbers[j] < numbers[min]){
+        min = j;
+      }
+    }
+    if(min != i) {
+      swap(numbers[i], numbers[min]);
     }
   } 
 }
